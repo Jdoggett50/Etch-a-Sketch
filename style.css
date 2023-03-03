@@ -1,13 +1,15 @@
 body {
     background: grey;
-  }
-  #container {
-      background-color: white;
-      display: grid;
-      height: 600px;
-      width: 600px;
-  }
-  .colored-squares {
-    background-color: black;
-  }
-  
+}
+#container {
+    background-color: white;
+    display: grid;
+    height: 600px;
+    width: 600px;
+}
+.colored-squares {
+background-color: black;
+}
+.toggle-lines{
+    border: 1px solid;
+}
