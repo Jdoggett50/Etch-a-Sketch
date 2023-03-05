@@ -3,6 +3,7 @@ const slider = document.querySelector('#slider');
 const container = document.querySelector('#container');
 const resetBtn = document.querySelector('#reset-btn');
 const lineBtn = document.querySelector('#line-btn');
+const colorBlack = document.querySelector('#color-black')
 const randomColor = document.querySelector('#random-color')
 let containerChildNodes = container.childNodes;
 
@@ -34,7 +35,7 @@ resetBtn.addEventListener('click', () => {
 function fillBlack(evt) {
     evt.target.classList.add('black-fill');
 }
-container.addEventListener('mouseover',toRandomColor)
+container.addEventListener('mouseover',fillBlack)
 
 function toggleLines (){
 containerChildNodes.forEach((child) => {
@@ -43,10 +44,10 @@ containerChildNodes.forEach((child) => {
     )
 }
 
-lineBtn.addEventListener('click', toggleLines)
+lineBtn.addEventListener('click',toggleLines)
 
 function toRandomColor(evt){
-    let random = () => randomNum = Math.floor(Math.random()*258);
+    let random = () => Math.floor(Math.random()*258);
     evt.target.style.backgroundColor = `rgb(${random()}, ${random()}, ${random()})`
 }
 
