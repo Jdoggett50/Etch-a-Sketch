@@ -9,24 +9,16 @@ function setGridLines(){
     container.style.gridTemplateRows = `repeat(${sliderSqrt}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${sliderSqrt}, 1fr)`;
 } 
-
 function generateSquareArea(){
     container.textContent ='';
     for(let i = 0; i < Math.pow(slider.value, 2); i++){
     const div = document.createElement('div');
-    div.classList.add('toggle-lines')
     container.append(div);
     }
 }
-
-function colorTarget(evt) {
-    evt.target.classList.add('colored-squares');
-}
-
 slider.addEventListener ('input', () => {
     setGridLines()
     generateSquareArea()
-    console.log(innerDivLines)
     }
 )
 
@@ -36,8 +28,23 @@ resetBtn.addEventListener('click', () => {
     }
 )
 
+function colorTarget(evt) {
+    evt.target.classList.add('colored-squares');
+}
 container.addEventListener('mouseover', colorTarget)
 
+function toggleLines (){
+let containerChildNodes = container.childNodes;
+containerChildNodes.forEach((child) => {
+        child.classList.toggle('lines')
+        }
+    )
+}
+
 lineBtn.addEventListener('click', () => {
-    innerDivLines.classList.remove('toggle-lines')
-})
+  toggleLines()
+    }
+)
+
+//toggle the text inside the button
+//create a button to generate random rgb values

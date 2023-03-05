@@ -10,6 +10,6 @@ body {
 .colored-squares {
 background-color: black;
 }
-.toggle-lines{
+.lines {
     border: 1px solid;
 }
