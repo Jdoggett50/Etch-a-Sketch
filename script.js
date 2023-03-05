@@ -7,6 +7,7 @@ const randomColor = document.querySelector('#random-color')
 let containerChildNodes = container.childNodes;
 
 function setGridLines(){
+    container.style.backgroundColor = 'white';
     let sliderSqrt = Math.sqrt(Math.pow(slider.value,2))
     container.style.gridTemplateRows = `repeat(${sliderSqrt}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${sliderSqrt}, 1fr)`;
@@ -30,7 +31,7 @@ resetBtn.addEventListener('click', () => {
     }
 )
 
-function colorTarget(evt) {
+function fillBlack(evt) {
     evt.target.classList.add('black-fill');
 }
 container.addEventListener('mouseover',toRandomColor)
@@ -43,10 +44,6 @@ containerChildNodes.forEach((child) => {
 }
 
 lineBtn.addEventListener('click', toggleLines)
-
-// randomColor.addEventListener('', )
-
-//`rgb(${randomNum}, ${randomNum}, ${randomNum})`
 
 function toRandomColor(evt){
     let random = () => randomNum = Math.floor(Math.random()*258);
