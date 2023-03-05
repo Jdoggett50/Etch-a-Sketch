@@ -3,6 +3,8 @@ const slider = document.querySelector('#slider');
 const container = document.querySelector('#container');
 const resetBtn = document.querySelector('#reset-btn');
 const lineBtn = document.querySelector('#line-btn');
+const randomColor = document.querySelector('#random-color')
+let containerChildNodes = container.childNodes;
 
 function setGridLines(){
     let sliderSqrt = Math.sqrt(Math.pow(slider.value,2))
@@ -29,22 +31,31 @@ resetBtn.addEventListener('click', () => {
 )
 
 function colorTarget(evt) {
-    evt.target.classList.add('colored-squares');
+    evt.target.classList.add('black-fill');
 }
-container.addEventListener('mouseover', colorTarget)
+container.addEventListener('mouseover',toRandomColor)
 
 function toggleLines (){
-let containerChildNodes = container.childNodes;
 containerChildNodes.forEach((child) => {
         child.classList.toggle('lines')
         }
     )
 }
 
-lineBtn.addEventListener('click', () => {
-  toggleLines()
-    }
-)
+lineBtn.addEventListener('click', toggleLines)
 
-//toggle the text inside the button
-//create a button to generate random rgb values
+// randomColor.addEventListener('', )
+
+//`rgb(${randomNum}, ${randomNum}, ${randomNum})`
+
+function toRandomColor(evt){
+    let random = () => randomNum = Math.floor(Math.random()*258);
+    evt.target.style.backgroundColor = `rgb(${random()}, ${random()}, ${random()})`
+}
+
+//  Notes:
+//      random button activates the colors
+//      one should activate and the other register the 
+//      color change
+//  toggle the text inside the button
+//  create a button to generate random rgb values
