@@ -10,10 +10,16 @@
 </head>
 <body>
     <div id = "container"></div>
+  <label for='slider'>Choose Grid Size</label>
     <input type="range" name ="slider" max ="50" min ="2" step="2" id="slider" value ="2">
   <button id='reset-btn'>Reset</button>
-  <button id ='line-btn'>Toggle Lines</button>
-  <button id ='random-color'>Random Color</button>
-  <button id ='color-black'>Black Color</button>
+  <button id ='line-btn'>Boxes on</button>
+  <label for ='fill-options'><span class =label-span>Choose a fill option</span></label>
+  <input list='fill-options' id='my-fill' name='fill-options'>
+    <datalist id='fill-options'>
+      <option value ='None'></option>
+      <option value ='Black'></option>
+      <option value ='Random'></option>
+    </datalist>
 </body>
 </html>
