@@ -20,7 +20,8 @@ function generateSquareArea(){
 }
 
 function fillBlack(evt) {
-    evt.target.style.backgroundColor ='black'
+  evt.target.style.border = '1px solid';
+  evt.target.style.backgroundColor ='black';
 }
 
 function toggleLines (){
@@ -33,7 +34,8 @@ function toggleLines (){
 
 function randomColor(evt){
   let random = () => Math.floor(Math.random()*258);
-  evt.target.style.backgroundColor =`rgb(${random()},${random()},${random()})`
+  evt.target.style.border = `rgb(${random()},${random()},${random()})`;
+  evt.target.style.backgroundColor =`rgb(${random()},${random()},${random()})`;
 }
 
 myFill.addEventListener('input',() => {

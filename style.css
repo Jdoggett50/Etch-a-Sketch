@@ -1,22 +1,33 @@
 body {
-    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(44, 30, 13);
 }
 #layered-square {
-    transform: translate(75%, 25%);
-    width: 725px;
-    height: 20px;
+    box-shadow: 0 0 8px rgb(179, 173, 120);
+    transform: translate(0, 15%);
     border-radius: 10px;
-    background-color: tan;
+    width: 650px;
+    padding: 40px 0px 40px 0px;
+    background-color: rgb(216, 97, 92);
 }
-#controls-container{
+#controls-container {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
-#grid{
-    position: fixed;
-    background-color: white;
+label
+{
+    padding: 1em 2em 0 1em;
+}
+button {
+    height: 35px;
+}
+#grid {
     display: grid;
-    transform: translate(100%, 25%);
+    margin: auto;
+    background-color: white;
     height: 600px;
     width: 600px;
 }
